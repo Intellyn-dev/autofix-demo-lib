@@ -32,7 +32,7 @@ def fetch_user(user_id: int) -> Optional[User]:
     return _USERS.get(user_id)
 
 
-def list_users(active_only: bool = True) -> list[User]:
+def get_all_users(active_only: bool = True) -> list[User]:
     """Return all users, optionally filtered to active only."""
     if active_only:
         return [u for u in _USERS.values() if u.active]
